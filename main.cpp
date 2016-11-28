@@ -20,7 +20,26 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    std::cout<<"Hello World!"<<std::endl;
+    
+    cout<<"Enter a number"<<endl;
+    int i;
+    cin>>i;
+    if(i<0) cout<<"negative";
+    else if(i==0) cout<<"zero";
+    else cout<<"positive";
+    
+    cout<<endl;
+    
+    switch(i){
+        case 0 : cout<<"0";break;
+        case -1 : cout<<"-1";break;
+        case 1 : cout<<"1";break;
+        default : cout<<"something else";
+    }
+    
+    cout<<endl;
+    
+    cout<<&i;
 
     return 0;
 }
