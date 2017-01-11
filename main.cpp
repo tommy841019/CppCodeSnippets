@@ -65,5 +65,25 @@ public:
         }
         return s;
     }
+    
+    
+    
+    // E 463. Island Perimeter
+    int islandPerimeter(vector<vector<int>>& grid) {
+        int perimeter = 0;
+        
+        for(int y=0;y<grid.size();++y){
+            for(int x=0; x<grid[y].size(); ++x){
+                if(grid[y][x]==1){
+                    if(x+1>=grid[y].size() || grid[y][x+1]==0) ++perimeter;
+                    if(x-1<0 || grid[y][x-1]==0) ++perimeter;
+                    if(y+1>=grid.size() || grid[y+1][x]==0) ++perimeter;
+                    if(y-1<0 || grid[y-1][x]==0) ++perimeter;
+                }
+            }
+        }
+        
+        return perimeter;
+    }
 };
 
